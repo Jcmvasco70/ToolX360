@@ -79,6 +79,7 @@ img{max-width:100%;display:block}
 .cat-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
 .cat-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;text-align:center;transition:.2s}
 .cat-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,0,.08);border-color:var(--orange)}
+.cat-card.active{border-color:var(--orange);background:#FFF7ED;box-shadow:0 8px 20px rgba(255,107,0,.15)}
 .cat-icon{width:46px;height:46px;display:grid;place-items:center;border-radius:10px;margin:0 auto 10px;font-size:18px}
 .cat-card h3{font-size:13px;font-weight:700}
 .cat-card span{font-size:11px;color:var(--muted)}

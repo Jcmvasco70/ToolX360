@@ -63,6 +63,59 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // FILTRO POR CATEGORIA (KPIs)
+  const catCards = document.querySelectorAll(".cat-card");
+  const filterInfo = document.getElementById("filterInfo");
+  const filterName = document.getElementById("filterName");
+  const clearFilter = document.getElementById("clearFilter");
+  const viewAllBtn = document.getElementById("viewAllBtn");
+
+  function applyFilter(filter){
+    const q = filter.toLowerCase();
+    let visible = 0;
+    document.querySelectorAll(".post-card").forEach(card=>{
+      const text = (card.dataset.title + " " + card.textContent).toLowerCase();
+      const match = text.includes(q);
+      card.style.display = match ? "" : "none";
+      if(match) visible++;
+    });
+    // Info para AdSense: se nada, mostra mensagem
+    let noRes = document.getElementById("noResults");
+    if(visible===0){
+      if(!noRes){
+        noRes = document.createElement("div");
+        noRes.id="noResults";
+        noRes.style.cssText="text-align:center;padding:20px;color:#64748B;font-size:14px;background:#fff;border:1px dashed #E2E8F0;border-radius:10px;margin-top:10px";
+        document.getElementById("postsList").appendChild(noRes);
+      }
+      noRes.textContent = "Nenhuma matéria para '"+filter+"' ainda. Em breve mais conteúdos!";
+      noRes.style.display="block";
+    } else if(noRes) noRes.style.display="none";
+
+    filterInfo.style.display = filter ? "block" : "none";
+    if(filterName) filterName.textContent = filter;
+    catCards.forEach(c=> c.classList.toggle("active", c.dataset.filter.toLowerCase()===q));
+    document.getElementById("recentes")?.scrollIntoView({behavior:"smooth"});
+  }
+
+  catCards.forEach(card=>{
+    card.addEventListener("click", (e)=>{
+      e.preventDefault();
+      const f = card.dataset.filter;
+      applyFilter(f);
+    });
+  });
+  clearFilter?.addEventListener("click", (e)=>{ e.preventDefault(); clearAll(); });
+  viewAllBtn?.addEventListener("click", (e)=>{ e.preventDefault(); clearAll(); });
+  function clearAll(){
+    document.querySelectorAll(".post-card").forEach(c=> c.style.display="");
+    filterInfo.style.display="none";
+    catCards.forEach(c=> c.classList.remove("active"));
+    const noRes = document.getElementById("noResults");
+    if(noRes) noRes.style.display="none";
+    document.getElementById("searchInput").value="";
+  }
+
   // Load more (simulado)
   document.getElementById("loadMore")?.addEventListener("click", function(){
     this.textContent = "Carregando...";

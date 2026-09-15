@@ -92,31 +92,32 @@
       <p>Encontre a ferramenta ideal para sua necessidade</p>
     </div>
     <div class="cat-grid">
-      <a href="#" class="cat-card">
+      <a href="#recentes" class="cat-card" data-filter="elétrica">
         <div class="cat-icon" style="background:#FFF3E0;color:#FF6B00"><i class="fa-solid fa-bolt"></i></div>
-        <h3>Elétrica</h3><span>12 Artigos</span>
+        <h3>Elétrica</h3><span>filtrar</span>
       </a>
-      <a href="#" class="cat-card">
+      <a href="#recentes" class="cat-card" data-filter="hidráulica">
         <div class="cat-icon" style="background:#E3F2FD;color:#0A192F"><i class="fa-solid fa-faucet"></i></div>
-        <h3>Hidráulica</h3><span>8 Artigos</span>
+        <h3>Hidráulica</h3><span>filtrar</span>
       </a>
-      <a href="#" class="cat-card">
+      <a href="#recentes" class="cat-card" data-filter="mecânica">
         <div class="cat-icon" style="background:#E8F5E9;color:#2E7D32"><i class="fa-solid fa-gears"></i></div>
-        <h3>Mecânica</h3><span>10 Artigos</span>
+        <h3>Mecânica</h3><span>filtrar</span>
       </a>
-      <a href="#" class="cat-card">
+      <a href="#recentes" class="cat-card" data-filter="elétricas">
         <div class="cat-icon" style="background:#F3E5F5;color:#6A1B9A"><i class="fa-solid fa-plug"></i></div>
-        <h3>Ferramentas Elétricas</h3><span>15 Artigos</span>
+        <h3>Ferramentas Elétricas</h3><span>filtrar</span>
       </a>
-      <a href="#" class="cat-card">
+      <a href="#recentes" class="cat-card" data-filter="epi">
         <div class="cat-icon" style="background:#FFEBEE;color:#C62828"><i class="fa-solid fa-helmet-safety"></i></div>
-        <h3>EPI & Segurança</h3><span>6 Artigos</span>
+        <h3>EPI & Segurança</h3><span>filtrar</span>
       </a>
-      <a href="#" class="cat-card">
+      <a href="#recentes" class="cat-card" data-filter="manutenção">
         <div class="cat-icon" style="background:#FFFDE7;color:#F9A825"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-        <h3>Manutenção Preventiva</h3><span>9 Artigos</span>
+        <h3>Manutenção Preventiva</h3><span>filtrar</span>
       </a>
     </div>
+    <div id="filterInfo" style="display:none;text-align:center;margin-top:14px;font-size:13px;color:#64748B">Filtrando por <strong id="filterName" style="color:#FF6B00"></strong> • <a href="#" id="clearFilter" style="color:#0A192F;text-decoration:underline">Ver tudo</a></div>
   </div>
 </section>
 
@@ -126,7 +127,7 @@
     <div class="posts-col">
       <div class="section-head small">
         <h2><i class="fa-solid fa-newspaper"></i> Últimas Matérias</h2>
-        <a href="#" class="view-all">Ver tudo</a>
+        <a href="#" class="view-all" id="viewAllBtn">Ver tudo</a>
       </div>
       <div class="posts-list" id="postsList">
         <!-- TESTE CLICKS - 5 NOVOS -->
