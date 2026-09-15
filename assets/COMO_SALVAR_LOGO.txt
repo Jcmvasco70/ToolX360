@@ -1,5 +1,0 @@
-﻿1. Clique com botão direito na 1ª imagem (ToolX360 horizontal) que enviou no chat > Salvar imagem como > 
-   Salvar em: C:\Users\JOSÉ CARLOS\Blog ToolX360\assets\logo-horizontal.png
-2. Clique com botão direito na 2ª imagem (circular POTÊNCIA) > Salvar como >
-   Salvar em: C:\Users\JOSÉ CARLOS\Blog ToolX360\assets\logo-circle.png
-3. Depois me avise que eu faço o push
