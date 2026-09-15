@@ -1,7 +1,0 @@
-﻿Salve as 5 imagens que enviou no chat assim:
-1. Cortador de chapa (LUATEK) -> assets/tools/cortador-chapa.jpg
-2. Multimetro Homtools -> assets/tools/multimetro-hm99.jpg
-3. Chave 48 em 1 -> assets/tools/chave-48em1.jpg
-4. Chave pia vermelha -> assets/tools/chave-pia.jpg
-5. Guia serra circular -> assets/tools/guia-serra.jpg
-Clique direito > Salvar imagem como > escolha a pasta
